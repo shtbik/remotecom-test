@@ -4,6 +4,7 @@ import Container from 'components/Container';
 import { TextLight } from 'components/Text';
 import { CardBody } from 'components/Card';
 import Link from 'components/Link';
+import Text from 'components/Text';
 
 export const StyledContainer = styled(Container)`
   margin-top: 40px;
@@ -37,4 +38,25 @@ export const StyledTextFieldWrapper = styled.div`
 
 export const StyledLink = styled(Link)`
   margin-right: 16px;
+`;
+
+export const StyledTextCaption = styled(Text)`
+  text-align: center;
+`;
+
+export const TableLoadingWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const TableLoadingInnerWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colors-blank);
 `;
