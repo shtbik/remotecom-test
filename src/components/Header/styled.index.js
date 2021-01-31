@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
+import Container from 'components/Container';
+
 export const Wrapper = styled.header`
   background-color: var(--colors-blank);
   width: 100%;
 `;
 
-export const Inner = styled.div`
-  margin: 0 auto;
+export const StyledContainer = styled(Container)`
   height: 80px;
-  max-width: var(--layout-width);
-  padding: 8px 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-end;

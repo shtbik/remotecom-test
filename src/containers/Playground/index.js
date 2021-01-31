@@ -1,26 +1,26 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Button from "components/Button";
-import LoadingLogo from "components/LoadingLogo";
-import Text, { TextLight } from "components/Text";
-import { Card, CardHeader, CardBody, CardFooter } from "components/Card";
-import { Table, TableThCell, TableCell, TableRow } from "components/Table";
-import TextField from "components/Form/TextField";
-import SelectField from "components/Form/SelectField";
+import Button from 'components/Button';
+import LoadingLogo from 'components/LoadingLogo';
+import Text, { TextLight } from 'components/Text';
+import Container from 'components/Container';
+import { Card, CardHeader, CardBody, CardFooter } from 'components/Card';
+import { Table, TableThCell, TableCell, TableRow } from 'components/Table';
+import TextField from 'components/Form/TextField';
+import SelectField from 'components/Form/SelectField';
 
-import { ReactComponent as IconSearch } from "theme/icons/search.svg";
-import { ReactComponent as IconUser } from "theme/icons/user.svg";
-import { ReactComponent as IconTimesCircle } from "theme/icons/times-circle.svg";
+import { ReactComponent as IconSearch } from 'theme/icons/search.svg';
+import { ReactComponent as IconUser } from 'theme/icons/user.svg';
+import { ReactComponent as IconTimesCircle } from 'theme/icons/times-circle.svg';
 
-const Container = styled.main`
-  margin: 40px auto;
-  width: 100%;
-  max-width: var(--layout-width);
+const StyledContainer = styled(Container)`
+  margin-top: 40px;
+  margin-bottom: 40px;
 `;
 
 const TitleComponent = styled.h2`
   font-size: 1.2rem;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   margin: 24px 0 0;
   padding-top: 24px;
@@ -34,19 +34,19 @@ const Demo = styled.main`
 export default function Playground() {
   // 💡 At the end, you can leave this file unused, it's okay! :)
   return (
-    <Container>
-      <Text size="h1" as="h1">
+    <StyledContainer>
+      <Text size='h1' as='h1'>
         Playground
       </Text>
-      <TextLight as="p">
-        These are some of the base components already built for you. You can{" "}
-        <Text size="bodyBold">use and modify</Text> them as you need!
+      <TextLight as='p'>
+        These are some of the base components already built for you. You can{' '}
+        <Text size='bodyBold'>use and modify</Text> them as you need!
       </TextLight>
 
       <TitleComponent>{`<Text>`}</TitleComponent>
       <Demo>
-        <Text as="p" size="body">
-          Everyday is a <Text size="bodyBold">new opportunity</Text> to grow.
+        <Text as='p' size='body'>
+          Everyday is a <Text size='bodyBold'>new opportunity</Text> to grow.
         </Text>
       </Demo>
 
@@ -73,24 +73,24 @@ export default function Playground() {
                 <tr>
                   <TableThCell>Employee Name</TableThCell>
                   <TableThCell>Country</TableThCell>
-                  <TableThCell align="right">Salary</TableThCell>
+                  <TableThCell align='right'>Salary</TableThCell>
                 </tr>
               </thead>
               <tbody>
                 <TableRow>
                   <TableCell>Ana Morgado</TableCell>
                   <TableCell>Portugal</TableCell>
-                  <TableCell align="right">EUR 5.000,00</TableCell>
+                  <TableCell align='right'>EUR 5.000,00</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Kate Will</TableCell>
                   <TableCell>United States</TableCell>
-                  <TableCell align="right">USD 10,000,00</TableCell>
+                  <TableCell align='right'>USD 10,000,00</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Pierre Clark</TableCell>
                   <TableCell>France</TableCell>
-                  <TableCell align="right">EUR 3.000,00</TableCell>
+                  <TableCell align='right'>EUR 3.000,00</TableCell>
                 </TableRow>
               </tbody>
             </Table>
@@ -101,25 +101,25 @@ export default function Playground() {
       <TitleComponent>{`<TextField>`}</TitleComponent>
       <Demo>
         <TextField
-          label="Name"
-          placeholder="e.g. Kim Fog"
-          helper="First and last name"
+          label='Name'
+          placeholder='e.g. Kim Fog'
+          helper='First and last name'
         />
 
         <TextField
-          label="E-mail"
-          type="email"
-          defaultValue="fakemail"
-          placeholder="e.g. job@email.com"
-          helper="Your personal e-mail"
-          errorMsg="It does not sound like an e-mail"
+          label='E-mail'
+          type='email'
+          defaultValue='fakemail'
+          placeholder='e.g. job@email.com'
+          helper='Your personal e-mail'
+          errorMsg='It does not sound like an e-mail'
         />
       </Demo>
 
       <TitleComponent>{`<SelectField>`}</TitleComponent>
       <Demo>
-        <SelectField label="Food" defaultValue="" helper="Your favorite food">
-          <option value="" hidden>
+        <SelectField label='Food' defaultValue='' helper='Your favorite food'>
+          <option value='' hidden>
             Select food...
           </option>
           <option>Chinese</option>
@@ -140,6 +140,6 @@ export default function Playground() {
         <IconUser />
         <IconTimesCircle />
       </Demo>
-    </Container>
+    </StyledContainer>
   );
 }

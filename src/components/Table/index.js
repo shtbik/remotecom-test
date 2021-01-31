@@ -1,22 +1,54 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0 0;
-  ${({ theme }) => theme.typography.bodySmall};
-  color: var(--colors-bayoux);
 
-  thead {
-    border-bottom: 4px solid var(--colors-blank);
-  }
+  ${({ theme }) => theme.typography.bodySmall}
+
+  ${({ tBodyHeight }) =>
+    tBodyHeight &&
+    `
+      tbody {
+        display: block;
+        overflow: auto;
+        height: ${tBodyHeight}px;
+      }
+
+      thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+  `}
+
+  color: var(--colors-bayoux);
+  letter-spacing: 0.4px;
 `;
+
+Table.propTypes = {
+  /** Property to set height of tbody tag, thead will be fixed */
+  tBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};
 
 export const TableRow = styled.tr``;
 
 export const TableThCell = styled.th`
   white-space: nowrap;
-  padding: 18px 0 18px 16px;
+  padding: ${({ align }) => {
+    switch (align) {
+      case 'right':
+        return '20px 16px 20px 0';
+      case 'center':
+        return '20px 16px';
+      case 'left':
+      default:
+        return '20px 0 20px 16px';
+    }
+  }};
   text-align: left;
   font-size: 0.6875rem;
   text-transform: uppercase;

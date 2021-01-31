@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Button from '../';
+import Button from '..';
 
 describe('Button', () => {
   it('renders correctly', () => {
@@ -14,7 +14,7 @@ describe('Button', () => {
   it('spreads custom attributes', () => {
     const clickFn = jest.fn();
     render(
-      <Button data-foo="12" onClick={clickFn}>
+      <Button data-foo='12' onClick={clickFn}>
         Hello
       </Button>
     );

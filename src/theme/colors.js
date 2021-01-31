@@ -14,6 +14,11 @@ const colors = css`
   --colors-catskillWhite: #eaf0f6;
   --colors-linkWater: #f4f7fc;
 
+  ${'' /* Input Search colors */}
+  --colors-search-active-background: #fdfeff;
+  --colors-search-active-border: #e7effc;
+  --colors-search-active-shadow: #c6d6ef;
+
   --colors-blank: #ffffff;
 `;
 
