@@ -12,6 +12,7 @@ export const StyledTextField = styled(TextField)`
     padding: 11px 16px;
     border: 1px solid transparent;
 
+    &:hover,
     &:active,
     &:focus,
     &:focus-within {

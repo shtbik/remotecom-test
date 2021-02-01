@@ -3,8 +3,11 @@ import { css } from 'styled-components';
 const colors = css`
   --colors-irisBlue: #624de3;
   --colors-darkBlue: #00234b;
+  --colors-royalBlue: #4e3db5;
   --colors-redPink: #ff4a5a;
   --colors-cosmos: #ffdbde;
+  --colors-moonraker: #d0caf7;
+  --colors-selago: #efedfc;
 
   --colors-bayoux: #525f7f;
   --colors-lynch: #617798;

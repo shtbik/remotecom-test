@@ -29,7 +29,7 @@ const PeopleList = () => {
   const { people, loading, error, query: prevQuery } = useSelector(
     (state) => state
   );
-  const handleMemberLink = useCallback(() => push('/create-employee'), [push]);
+  const handleMemberLink = useCallback(() => push('/people/add'), [push]);
   const handleSearch = (query) => {
     // for cases when user wants to search empty query and has already loaded full list
     if ((!prevQuery && !query && people.length) || prevQuery === query)

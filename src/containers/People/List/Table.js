@@ -54,7 +54,7 @@ const PeopleTable = ({ people, tBodyHeight, loading, error }) => {
                 {numberWithSpaces(salary.toFixed(2))}
               </TableCell>
               <TableCell align='right' width='17%'>
-                <StyledLink to={`/employee/${id}`}>Edit</StyledLink>
+                <StyledLink to={`/people/edit/${id}`}>Edit</StyledLink>
               </TableCell>
             </TableRow>
           ))

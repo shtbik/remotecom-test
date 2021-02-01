@@ -8,7 +8,7 @@ import Text from 'components/Text';
 
 export const StyledContainer = styled(Container)`
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 `;
 
 export const StyledCardBody = styled(CardBody)`
