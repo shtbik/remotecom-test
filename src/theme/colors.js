@@ -16,13 +16,21 @@ const colors = css`
   --colors-mischka: #e8ecee;
   --colors-catskillWhite: #eaf0f6;
   --colors-linkWater: #f4f7fc;
+  --colors-spindle: #b7b8eb;
 
   ${'' /* Input Search colors */}
   --colors-search-active-background: #fdfeff;
   --colors-search-active-border: #e7effc;
   --colors-search-active-shadow: #c6d6ef;
 
+  ${'' /* Background */}
   --colors-blank: #ffffff;
+  --colors-geyser: #cbd3dc;
+
+  ${'' /* Alerts */}
+  --colors-error: rgba(255, 75, 85, 0.05);
+  --colors-error-border: rgba(255, 74, 90, 0.45);
+  --colors-error-icon: rgba(255, 74, 90, 1);
 `;
 
 export default colors;

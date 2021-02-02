@@ -1,22 +1,27 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Text, { TextLight } from 'components/Text';
-import { Card, CardHeader } from 'components/Card';
+import countriesList from 'configs/countries';
+
+import { TextLight } from 'components/Text';
+import { Card } from 'components/Card';
 import TextField from 'components/Form/TextField';
 import SelectField from 'components/Form/SelectField';
+import Alert from 'components/Alert';
 
-import countriesList from 'configs/countries';
+import RadioGroup from './RadioGroup';
 
 import {
   StyledContainer,
+  StyledCardHeader,
+  StyledTextH4,
   StyledCardBody,
   StyledCardFooter,
   StyledButton,
   StyledButtonCancel,
   StyledTextBodyLead,
-  StyledRadioGroup,
   StyledWrapperRadioGroup,
+  StyledSelectField,
 } from './styled.index';
 
 const MemberForm = () => {
@@ -26,14 +31,14 @@ const MemberForm = () => {
   return (
     <StyledContainer>
       <Card>
-        <CardHeader>
-          <Text size='h4' as='h1'>
+        <StyledCardHeader>
+          <StyledTextH4 size='h4' as='h1'>
             Add a new team member
-          </Text>
+          </StyledTextH4>
           <TextLight size='bodySmall' as='p'>
             Fill out the information of your new team member.
           </TextLight>
-        </CardHeader>
+        </StyledCardHeader>
         <form>
           <StyledCardBody>
             <TextField
@@ -64,45 +69,26 @@ const MemberForm = () => {
               label='Salary'
               placeholder='e.g. 5000'
               helper='Gross yearly salary'
+              suffix={
+                <StyledSelectField>
+                  <option value='EUR'>EUR</option>
+                  <option value='USD'>USD</option>
+                  <option value='GBP'>GBP</option>
+                </StyledSelectField>
+              }
             />
 
             <StyledWrapperRadioGroup>
               <StyledTextBodyLead size='bodyLead' as='p'>
                 Type of employment
               </StyledTextBodyLead>
-
-              <StyledRadioGroup
-                name='type'
-                options={[
-                  {
-                    value: 'contractor',
-                    label: (
-                      <div>
-                        <Text size='bodyMedium' as='div'>
-                          Contractor
-                        </Text>
-                        <TextLight size='bodySmall' as='div'>
-                          Pay your contractors
-                        </TextLight>
-                      </div>
-                    ),
-                  },
-                  {
-                    value: 'employee',
-                    label: (
-                      <div>
-                        <Text size='bodyMedium' as='div'>
-                          Employee
-                        </Text>
-                        <TextLight size='bodySmall' as='div'>
-                          Hire and manage remotely
-                        </TextLight>
-                      </div>
-                    ),
-                  },
-                ]}
-              />
+              <RadioGroup />
             </StyledWrapperRadioGroup>
+
+            <Alert
+              type='error'
+              message='Ups, something in our servers went wrong!'
+            />
           </StyledCardBody>
           <StyledCardFooter>
             <StyledButtonCancel variant='outlined' onClick={handleListLink}>

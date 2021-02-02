@@ -5,7 +5,7 @@ import { Label, Hint, Field } from '../FieldParts';
 import { StyledInput, StyledInputWrapper, StyledPrefix } from './styled.index';
 
 const TextField = forwardRef(
-  ({ label, helper, errorMsg, prefix, className, ...props }, ref) => {
+  ({ label, helper, errorMsg, prefix, suffix, className, ...props }, ref) => {
     const invalidAttr = errorMsg ? { 'aria-invalid': true } : {};
 
     return (
@@ -15,9 +15,10 @@ const TextField = forwardRef(
         <StyledInputWrapper>
           {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
           <StyledInput ref={ref} {...props} {...invalidAttr} />
+          {suffix && <StyledPrefix>{suffix}</StyledPrefix>}
         </StyledInputWrapper>
 
-        {errorMsg || (helper && <Hint errorMsg={errorMsg} helper={helper} />)}
+        {(errorMsg || helper) && <Hint errorMsg={errorMsg} helper={helper} />}
       </Field>
     );
   }
@@ -27,6 +28,7 @@ TextField.defaultProps = {
   type: 'text',
   label: null,
   prefix: null,
+  suffix: null,
 };
 
 TextField.propTypes = {
@@ -40,6 +42,8 @@ TextField.propTypes = {
   errorMsg: PropTypes.string,
   /** The prefix component (Icons, etc.) */
   prefix: PropTypes.node,
+  /** The suffix component (Selects, etc.) */
+  suffix: PropTypes.node,
 };
 
 export default TextField;

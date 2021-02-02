@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { ThemeProvider } from 'styled-components';
+import { theme, GlobalStyles } from 'theme';
 
 // Layout
-import { theme, GlobalStyles } from 'theme';
 import Header from 'components/Header';
 
 // Pages
@@ -26,10 +26,11 @@ export default function App() {
           <Header />
 
           <Switch>
-            <Route exact path='/' component={Playground} />
+            <Route exact path='/' component={PeopleList} />
             <Route exact path='/people' component={PeopleList} />
             <Route exact path='/people/add' component={PeopleForm} />
             <Route exact path='/people/edit/:id' component={PeopleForm} />
+            <Route exact path='/playground' component={Playground} />
 
             <Route path='*' component={() => <div>404</div>} />
           </Switch>

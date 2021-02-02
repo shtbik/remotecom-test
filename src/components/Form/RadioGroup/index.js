@@ -4,22 +4,40 @@ import PropTypes from 'prop-types';
 import RadioButton from '../RadioButton';
 import { TRadioButton } from '../RadioButton/types';
 
-const RadioGroup = ({ name, options, defaultValue, className }) => {
+const RadioGroup = ({
+  name,
+  options,
+  value,
+  defaultValue,
+  className,
+  onChange,
+}) => {
   const [activeValue, setActiveValue] = useState(defaultValue);
+  const isUncontrolled = value == null;
+  const resultValue = isUncontrolled ? activeValue : value;
 
   const handleChange = (event) => {
-    setActiveValue(event.target.value);
+    const { value } = event.target;
+
+    if (isUncontrolled) {
+      setActiveValue(value);
+    }
+
+    if (onChange) {
+      onChange(value);
+    }
   };
 
   return (
     <div className={className}>
-      {options.map(({ value: optionValue, label }) => (
+      {options.map(({ value: optionValue, label, wrapper }) => (
         <RadioButton
           key={optionValue}
           name={name}
           value={optionValue}
           label={label}
-          checked={optionValue === activeValue}
+          wrapper={wrapper}
+          checked={optionValue === resultValue}
           onChange={handleChange}
         />
       ))}

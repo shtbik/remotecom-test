@@ -4,11 +4,8 @@ export const StyledLabel = styled.label`
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
-`;
-
-export const StyledLabelContentWrapper = styled.div`
-  margin-right: 50px;
 `;
 
 export const StyledInputRadio = styled.input`
@@ -25,7 +22,7 @@ export const StyledInputRadioButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
+  flex: 16px 0 0;
   height: 16px;
   z-index: 1;
 

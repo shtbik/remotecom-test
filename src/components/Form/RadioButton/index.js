@@ -5,7 +5,6 @@ import { TRadioButton } from './types';
 
 import {
   StyledLabel,
-  StyledLabelContentWrapper,
   StyledInputRadio,
   StyledInputRadioButton,
 } from './styled.index';
@@ -14,6 +13,7 @@ const RadioButton = ({
   name,
   value,
   label,
+  wrapper: Wrapper,
   defaultChecked,
   checked,
   onChange,
@@ -34,11 +34,9 @@ const RadioButton = ({
     }
   };
 
-  return (
+  const Component = (
     <StyledLabel>
-      {label ? (
-        <StyledLabelContentWrapper>{label}</StyledLabelContentWrapper>
-      ) : null}
+      {label || null}
 
       <StyledInputRadio
         type='radio'
@@ -49,6 +47,12 @@ const RadioButton = ({
       />
       <StyledInputRadioButton checked={resultChecked} />
     </StyledLabel>
+  );
+
+  return Wrapper ? (
+    <Wrapper checked={resultChecked}>{Component}</Wrapper>
+  ) : (
+    Component
   );
 };
 
