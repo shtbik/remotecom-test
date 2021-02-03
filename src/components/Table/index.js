@@ -78,9 +78,10 @@ TableThCell.defaultProps = {
 
 export const TableCell = styled.td`
   height: 64px;
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px;
   border-top: 1px solid var(--colors-mischka);
   text-align: ${({ align }) => align};
+  overflow-wrap: break-word;
 
   ${TableRow}:first-child & {
     border-top: 0;

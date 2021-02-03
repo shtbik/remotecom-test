@@ -104,6 +104,7 @@ const MemberForm = () => {
                   label='Name'
                   defaultValue={name}
                   required
+                  maxlength='50'
                   placeholder='e.g. Kim Fog'
                   helper='First and last name'
                 />
@@ -112,6 +113,7 @@ const MemberForm = () => {
                   label='Job title'
                   defaultValue={jobTitle}
                   required
+                  maxlength='50'
                   placeholder='e.g. Product Manager'
                   helper='What is their role?'
                 />
@@ -128,9 +130,9 @@ const MemberForm = () => {
                 <TextField
                   type='number'
                   min={0}
+                  max={100000000}
                   name='salary'
                   label='Salary'
-                  step='0.01'
                   defaultValue={salary}
                   required
                   placeholder='e.g. 5000'
