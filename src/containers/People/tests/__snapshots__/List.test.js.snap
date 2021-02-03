@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`People/List common render 1`] = `
+<div>
+  <header
+    class="sc-hKgILt gQvQYy"
+  >
+    <div
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
+    >
+      <a
+        class="sc-jSgupP eRMlkk"
+        href="#profile-page"
+      >
+        <span
+          class="sc-gKsewC dyXmPG"
+        />
+        <div
+          class="sc-iBPRYJ guClff"
+        >
+          <span
+            class="sc-bdfBwQ iSpnv"
+          >
+            Julie Howard
+          </span>
+          <span
+            class="sc-bdfBwQ sc-gsTCUz gdLWuU hLkbdn"
+          >
+            Admin
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <main
+    class="sc-dlfnbm sc-iJuUWI eGSTIL cWwGUa"
+  >
+    <div
+      class="sc-ezrdKe ijUgnk"
+    >
+      <div
+        class="sc-bYEvPH MmGrG"
+      >
+        <h1
+          class="sc-bdfBwQ dFaPjO"
+        >
+          People
+        </h1>
+        <span
+          class="sc-bdfBwQ sc-gsTCUz sc-kLgntA gdLWuU hLkbdn dGUObO"
+        />
+      </div>
+      <button
+        class="sc-fubCfw emMLAO"
+        type="button"
+      >
+        <span
+          class="sc-pFZIQ fetSEj"
+        >
+          <svg
+            width="20"
+          >
+            user.svg
+          </svg>
+        </span>
+        Add member
+      </button>
+    </div>
+    <div
+      class="sc-kEjbxe dVuVKB"
+    >
+      <div
+        class="sc-crrsfI sc-giIncl iTeDcR gbBJUC"
+      >
+        <div
+          class="sc-iktFzd giMDNy"
+        >
+          <form>
+            <label
+              class="sc-hBEYos jscJTK sc-dIUggk hzToxN"
+            >
+              <span
+                class="sc-fFubgz gPXhUc"
+              >
+                <span
+                  class="sc-idOhPF frAAEJ"
+                >
+                  <svg
+                    height="16"
+                    width="16"
+                  >
+                    search.svg
+                  </svg>
+                </span>
+                <input
+                  class="sc-bkzZxe dcivLx"
+                  placeholder="Search employees..."
+                  type="search"
+                />
+              </span>
+            </label>
+          </form>
+        </div>
+        <table
+          class="sc-hHftDr eLinuH"
+        >
+          <thead>
+            <tr>
+              <th
+                class="sc-kfzAmx kEeKnX"
+                width="22.5%"
+              >
+                Name
+              </th>
+              <th
+                class="sc-kfzAmx kEeKnX"
+                width="25.5%"
+              >
+                Type
+              </th>
+              <th
+                class="sc-kfzAmx kEeKnX"
+              >
+                Country
+              </th>
+              <th
+                class="sc-kfzAmx ccfIQM"
+              >
+                Salary
+              </th>
+              <th
+                class="sc-kfzAmx ccfIQM"
+                width="17%"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="sc-gWHgXt bcgIlC"
+            >
+              <td
+                class="sc-cBNfnY hGJwza"
+              >
+                <div
+                  class="sc-cxFLnm dbNWns"
+                >
+                  <svg
+                    version="1.1"
+                    viewBox="0 0 119.9 148.4"
+                    x="0px"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0px"
+                  >
+                    <defs />
+                    <g>
+                      <g>
+                        <path
+                          class="sc-bBXqnf"
+                          d="M49.1,117.1C41.5,112.7,35.4,106.6,31,99c-4.4-7.6-6.7-15.9-6.7-24.8c0-9.1,2.2-17.4,6.7-25.1 c4.4-7.6,10.5-13.7,18.1-18.1c7.6-4.4,15.9-6.6,24.9-6.7V0C60.7,0,48.3,3.3,37,9.9C25.5,16.5,16.5,25.5,9.9,37 C3.3,48.4,0,60.8,0,74.2c0,13.4,3.3,25.8,9.9,37.1c6.6,11.3,15.6,20.3,27.1,27c11.4,6.7,23.7,10,37.1,10.1v-24.6 C65.1,123.7,56.8,121.5,49.1,117.1z"
+                        />
+                      </g>
+                      <g>
+                        <path
+                          class="sc-iwyYcG"
+                          d="M74.1,28.5V120c25.3,0,45.8-20.5,45.8-45.8S99.4,28.5,74.1,28.5z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+`;
