@@ -8,9 +8,10 @@ In this exercise you're asked to implement some features in an existing React ap
 
 If you have any questions, don't hesitate to create an issue in this repo or reach out directly to marcelo@remote.com.
 
-## Expectations  
-* It should be production-ready code - the code will show us how you ship things to production and be a mirror of your craft.  
-* Take whatever time you need - we won't look at start/end dates, you have a life besides this and we respect that!  
+## Expectations
+
+- It should be production-ready code - the code will show us how you ship things to production and be a mirror of your craft.
+- Take whatever time you need - we won't look at start/end dates, you have a life besides this and we respect that!
 
 ### 🚀 What are you building
 
@@ -118,4 +119,4 @@ This script runs automatically after `npm install`.
 
 ## Implementation details
 
-This section is for you to fill in with any decisions you made that may be relevant. You can also change this README to fit your needs.
+Design - https://www.figma.com/file/9rg0ZaQYfLailCQ7IV4DJd/FE-code-exercise-(shtbik)

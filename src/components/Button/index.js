@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyledButton, StyledPrefix, StyledIconLoading } from './styled.index';
 
 const Button = memo(
-  ({ type, variant, children, prefix, loading, ...props }) => {
+  ({ children, type, variant, prefix, loading, ...props }) => {
     return (
       <StyledButton type={type} variant={variant} {...props}>
         {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
@@ -21,7 +21,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  /** Native button's tag property */
+  /** Native button property */
   type: PropTypes.string,
   /** Various types of view */
   variant: PropTypes.oneOf(['contained', 'outlined']),
