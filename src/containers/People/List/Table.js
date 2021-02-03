@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { numberWithSpaces, getCurrencySymbol } from 'utils/amount';
+import { TMember } from 'redux/people/types';
 import { Table, TableThCell, TableCell, TableRow } from 'components/Table';
 import LoadingLogo from 'components/LoadingLogo';
-
-import { numberWithSpaces, getCurrencySymbol } from 'utils/amount';
 
 import {
   StyledLink,
@@ -70,17 +70,7 @@ PeopleTable.defaultProps = {
 
 PeopleTable.propTypes = {
   // ** Array of people * /
-  people: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      jobTitle: PropTypes.string.isRequired,
-      country: PropTypes.string.isRequired,
-      salary: PropTypes.number.isRequired,
-      currency: PropTypes.string.isRequired,
-      employment: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  people: PropTypes.arrayOf(PropTypes.shape(TMember)).isRequired,
   // ** Height of tbody tag * /
   tBodyHeight: PropTypes.number,
   // TODO: take typedefs from reducer

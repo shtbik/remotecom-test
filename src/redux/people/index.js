@@ -81,6 +81,7 @@ const initialMember = {
 
 // TPeopleState
 const initialState = {
+  // Should move structure to Object for find cached value at O(1), but at the moment not so critical
   people: [],
   member: initialMember,
   query: '',
@@ -88,7 +89,7 @@ const initialState = {
   error: false,
 };
 
-// TODO: maybe add Immutable.JS
+// TODO: add Immutable.JS for the future
 export default function peopleReducer(state = initialState, action) {
   const { type, payload } = action;
 

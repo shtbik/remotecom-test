@@ -28,6 +28,7 @@ import {
   StyledLoadingWrapper,
 } from './styled.index';
 
+// TODO: add validation for the future
 const MemberForm = () => {
   const { push } = useHistory();
   const { id } = useParams();
@@ -37,7 +38,7 @@ const MemberForm = () => {
 
   const { name, jobTitle, country, salary, currency, employment } = member;
 
-  const handleSubmit = (event) => {
+  const handleChangeMember = (event) => {
     event.preventDefault();
 
     const fromData = new FormData(event.target);
@@ -62,7 +63,7 @@ const MemberForm = () => {
           </TextLight>
         </StyledCardHeader>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleChangeMember}>
           <StyledCardBody>
             {loading ? (
               <StyledLoadingWrapper>
