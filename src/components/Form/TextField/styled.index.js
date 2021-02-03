@@ -36,6 +36,18 @@ export const StyledInput = styled.input`
   &[type='search']::-webkit-search-results-decoration {
     display: none;
   }
+
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
 `;
 
 export const StyledPrefix = styled.span`

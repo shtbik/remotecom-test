@@ -1,4 +1,4 @@
-import axios from 'utils/api';
+import axios from 'configs/api';
 
 import {
   SET_LOADING,
@@ -6,6 +6,7 @@ import {
   SET_ERROR,
   FETCH_PEOPLE_REQUEST,
   FETCH_MEMBER_REQUEST,
+  EDIT_MEMBER_REQUEST,
 } from './actionTypes';
 import {
   setLoading,
@@ -19,7 +20,7 @@ import {
 export const fetchPeople = (query = '') => {
   return async (dispatch, getState) => {
     dispatch(setLoading());
-    dispatch(setQuery(query));
+    dispatch(setQuery({ query }));
 
     const params = {};
     if (query) params.name_like = query;
@@ -28,7 +29,7 @@ export const fetchPeople = (query = '') => {
       const peopleRes = await axios.get('/people', {
         params,
       });
-      dispatch(setPeopleData(peopleRes.data));
+      dispatch(setPeopleData({ people: peopleRes.data }));
     } catch (error) {
       dispatch(setError());
     }
@@ -40,19 +41,21 @@ export const fetchMember = (memberId) => {
     const { people } = getState();
     dispatch(setLoading());
 
-    // This is a trick to divide a synchronous call stack and re-paint (re-render) changes
-    // We can remove, but I need a power tool to manage form/field state and to avoid extra repaint
-    await new Promise((resolve) =>
-      setTimeout(() => {
-        resolve();
-      })
-    );
-
     if (people.length) {
+      // This is a trick to divide a synchronous call stack and re-paint (re-render) changes
+      // We can remove, but I need a power tool to manage form/field state and to avoid extra repaint
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        });
+      });
+
       // eslint-disable-next-line eqeqeq
       const cachedMember = people.find((member) => member.id == memberId);
       if (cachedMember) {
-        dispatch(setMemberData(cachedMember));
+        dispatch(
+          setMemberData({ type: FETCH_MEMBER_REQUEST, member: cachedMember })
+        );
         return;
       }
     }
@@ -61,8 +64,41 @@ export const fetchMember = (memberId) => {
       const memberRes = await axios.get('/people', {
         params: { id: memberId },
       });
-      dispatch(setMemberData(memberRes.data[0]));
+      dispatch(
+        setMemberData({ type: FETCH_MEMBER_REQUEST, member: memberRes.data[0] })
+      );
     } catch (err) {
+      dispatch(setError());
+    }
+  };
+};
+
+export const createOrUpdateMember = ({ id, memberInput }) => {
+  return async (dispatch) => {
+    dispatch(setLoading());
+
+    const reqParams = {
+      method: 'POST',
+      path: '/people',
+    };
+
+    if (id) {
+      reqParams.method = 'PATCH';
+      reqParams.path = `/people/${id}`;
+    }
+
+    try {
+      const { method, path } = reqParams;
+      const memberRes = await axios(path, {
+        method,
+        data: memberInput,
+      });
+
+      dispatch(
+        setMemberData({ type: EDIT_MEMBER_REQUEST, member: memberRes.data })
+      );
+      return memberRes.data.id;
+    } catch {
       dispatch(setError());
     }
   };
@@ -107,6 +143,7 @@ export default function peopleReducer(state = initialState, action) {
         error: false,
       };
     case FETCH_MEMBER_REQUEST:
+    case EDIT_MEMBER_REQUEST:
       return { ...state, member: payload, loading: false, error: false };
     case SET_ERROR:
       return { ...state, loading: false, error: true };

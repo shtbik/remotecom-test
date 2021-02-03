@@ -15,6 +15,11 @@ export const Table = styled.table`
         display: block;
         overflow: auto;
         height: ${tBodyHeight}px;
+
+        @media screen and (max-width: 550px) {
+          height: calc(100vh - 370px);
+          min-height: 400px;
+        }
       }
 
       thead,

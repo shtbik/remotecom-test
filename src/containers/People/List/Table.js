@@ -25,7 +25,6 @@ const PeopleTable = ({ people, tBodyHeight, loading, error }) => {
           <TableThCell align='right' width='17%' />
         </tr>
       </thead>
-
       <tbody>
         {/*
           TODO: need to add handler for error in UI (figma) 
@@ -69,14 +68,13 @@ PeopleTable.defaultProps = {
 };
 
 PeopleTable.propTypes = {
-  // ** Array of people * /
+  /** Array of people */
   people: PropTypes.arrayOf(PropTypes.shape(TMember)).isRequired,
-  // ** Height of tbody tag * /
+  /** Height of tbody tag */
   tBodyHeight: PropTypes.number,
-  // TODO: take typedefs from reducer
-  // ** State of request * /
+  /** State of request */
   loading: PropTypes.bool.isRequired,
-  // ** State of error * /
+  /** State of error */
   error: PropTypes.bool.isRequired,
 };
 

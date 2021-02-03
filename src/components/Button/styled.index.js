@@ -1,29 +1,60 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+import { ReactComponent as IconLoading } from 'theme/icons/loading.svg';
 
 const getButtonStylesByVariant = (variant) => {
   switch (variant) {
     case 'outlined':
       return css`
-        border: 2px solid var(--colors-moonraker);
+        border-width: 2px;
         background: var(--colors-blank);
+        border-color: var(--colors-moonraker);
         color: var(--colors-irisBlue);
 
         &:hover {
           background: var(--colors-selago);
           color: var(--colors-irisBlue);
-          border-color: var(--colors-irisBlue);
+        }
+
+        &:focus {
+          border-width: 3px;
+          border-color: var(--colors-spindle);
         }
       `;
     case 'contained':
     default:
       return css`
         background: var(--colors-irisBlue);
+        border-color: var(--colors-irisBlue);
         color: var(--colors-blank);
 
         &:hover {
           background: var(--colors-royalBlue);
+          border-color: var(--colors-royalBlue);
+        }
+
+        &:focus {
+          border-color: #d0caf7;
         }
       `;
+  }
+};
+
+const getLoaderStylesByVariant = (variant) => {
+  switch (variant) {
+    case 'outlined':
+      return css`
+        circle {
+          fill: var(--colors-moonraker);
+        }
+
+        path {
+          fill: var(--colors-irisBlue);
+        }
+      `;
+    case 'contained':
+    default:
+      return ``;
   }
 };
 
@@ -34,14 +65,21 @@ export const StyledButton = styled.button`
   font-size: 1rem;
   font-weight: 500;
   line-height: 1;
-  min-height: 44px;
+  height: 44px;
   padding: 10px 25px;
-  border: none;
+  border-width: 3px;
+  border-style: solid;
   border-radius: 50px;
   letter-spacing: 0.5px;
   cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
 
   ${({ variant }) => getButtonStylesByVariant(variant)}
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 export const StyledPrefix = styled.span`
@@ -50,4 +88,16 @@ export const StyledPrefix = styled.span`
   path {
     fill: var(--colors-blank);
   }
+`;
+
+const external = keyframes` 
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+export const StyledIconLoading = styled(IconLoading)`
+  animation: ${external} 1s linear infinite;
+
+  ${({ variant }) => getLoaderStylesByVariant(variant)}
 `;

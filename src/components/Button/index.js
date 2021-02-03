@@ -1,20 +1,23 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledButton, StyledPrefix } from './styled.index';
+import { StyledButton, StyledPrefix, StyledIconLoading } from './styled.index';
 
-const Button = memo(({ type, variant, children, prefix, ...props }) => {
-  return (
-    <StyledButton type={type} variant={variant} {...props}>
-      {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
-      {children}
-    </StyledButton>
-  );
-});
+const Button = memo(
+  ({ type, variant, children, prefix, loading, ...props }) => {
+    return (
+      <StyledButton type={type} variant={variant} {...props}>
+        {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
+        {loading ? <StyledIconLoading variant={variant} /> : children}
+      </StyledButton>
+    );
+  }
+);
 
 Button.defaultProps = {
   type: 'button',
   variant: 'contained',
+  loading: false,
 };
 
 Button.propTypes = {
@@ -26,6 +29,8 @@ Button.propTypes = {
   children: PropTypes.node,
   /** The prefix component (Icons, etc.) */
   prefix: PropTypes.node,
+  /** For the loading state */
+  loading: PropTypes.bool,
 };
 
 export default Button;

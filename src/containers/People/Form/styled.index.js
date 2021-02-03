@@ -7,6 +7,7 @@ import Text from 'components/Text';
 import RadioGroup from 'components/Form/RadioGroup';
 import { StyledLabel } from 'components/Form/RadioButton/styled.index';
 import SelectField from 'components/Form/SelectField';
+import Alert from 'components/Alert';
 
 export const StyledContainer = styled(Container)`
   margin-top: 40px;
@@ -42,11 +43,14 @@ export const StyledLoadingWrapper = styled.div`
 `;
 
 export const StyledCardFooter = styled(CardFooter)`
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledButton = styled(Button)`
   margin-left: 16px;
+  min-width: 182px;
 `;
 
 export const StyledButtonCancel = styled(Button)`
@@ -95,4 +99,8 @@ export const StyledSelectField = styled(SelectField)`
   background-position-x: 100%;
   font-size: 16px;
   padding: 0;
+`;
+
+export const StyledAlert = styled(Alert)`
+  margin-bottom: 32px;
 `;

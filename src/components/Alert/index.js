@@ -13,20 +13,26 @@ const getIcon = (type) => {
   }
 };
 
-const Alert = memo(({ type, message }) => {
+const Alert = memo(({ type, message, className }) => {
   const Icon = getIcon(type);
   return (
-    <StyledAlert type={type}>
+    <StyledAlert type={type} className={className}>
       {Icon} <StyledWrapper>{message}</StyledWrapper>
     </StyledAlert>
   );
 });
+
+Alert.defaultProps = {
+  className: '',
+};
 
 Alert.propTypes = {
   /** Type of alert for defferent styles */
   type: PropTypes.oneOf(['error']).isRequired,
   /** To show what is alert about */
   message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  /** ClassName for styles */
+  className: PropTypes.string,
 };
 
 export default Alert;
