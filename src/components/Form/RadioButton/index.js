@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { TRadioButton } from './types';
@@ -17,6 +17,7 @@ const RadioButton = ({
   defaultChecked,
   checked,
   onChange,
+  required,
 }) => {
   const [activeValue, setActiveValue] = useState(defaultChecked && value);
   const isUncontrolled = checked == null;
@@ -44,6 +45,7 @@ const RadioButton = ({
         value={value}
         checked={resultChecked}
         onChange={handleChange}
+        required={required}
       />
       <StyledInputRadioButton checked={resultChecked} />
     </StyledLabel>
@@ -61,10 +63,9 @@ RadioButton.defaultProps = {
   defaultChecked: null,
   checked: null,
   onChange: null,
+  required: false,
 };
 
 RadioButton.propTypes = { ...TRadioButton, name: PropTypes.string.isRequired };
 
-const memoizedRadioButton = memo(RadioButton);
-
-export default memoizedRadioButton;
+export default RadioButton;

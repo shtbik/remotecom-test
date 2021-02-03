@@ -1,15 +1,16 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import { StyledButton, StyledPrefix } from './styled.index';
 
-export default function Button({ type, variant, children, prefix, ...props }) {
+const Button = memo(({ type, variant, children, prefix, ...props }) => {
   return (
     <StyledButton type={type} variant={variant} {...props}>
       {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
       {children}
     </StyledButton>
   );
-}
+});
 
 Button.defaultProps = {
   type: 'button',
@@ -26,3 +27,5 @@ Button.propTypes = {
   /** The prefix component (Icons, etc.) */
   prefix: PropTypes.node,
 };
+
+export default Button;

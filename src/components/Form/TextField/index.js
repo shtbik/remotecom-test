@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import { Label, Hint, Field } from '../FieldParts';
+import { Hint, THint } from '../Hint';
+import { Label, Field } from '../FieldParts';
 
 import { StyledInput, StyledInputWrapper, StyledPrefix } from './styled.index';
 
@@ -36,14 +37,11 @@ TextField.propTypes = {
   type: PropTypes.string,
   /** Field label */
   label: PropTypes.string,
-  /** Field description message */
-  helper: PropTypes.string,
-  /** Field error message */
-  errorMsg: PropTypes.string,
   /** The prefix component (Icons, etc.) */
   prefix: PropTypes.node,
   /** The suffix component (Selects, etc.) */
   suffix: PropTypes.node,
+  ...THint,
 };
 
 export default TextField;

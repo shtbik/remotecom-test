@@ -22,9 +22,23 @@ export const StyledTextH4 = styled(Text)`
 `;
 
 export const StyledCardBody = styled(CardBody)`
+  position: relative;
   max-width: 594px;
+  min-height: calc(100vh - 230px - 120px - 100px);
   margin: auto;
   padding-top: 46px;
+`;
+
+export const StyledLoadingWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  top: 0;
+  bottom: 0;
 `;
 
 export const StyledCardFooter = styled(CardFooter)`

@@ -9,6 +9,7 @@ const RadioGroup = ({
   options,
   value,
   defaultValue,
+  required,
   className,
   onChange,
 }) => {
@@ -24,7 +25,7 @@ const RadioGroup = ({
     }
 
     if (onChange) {
-      onChange(value);
+      onChange(event);
     }
   };
 
@@ -39,6 +40,7 @@ const RadioGroup = ({
           wrapper={wrapper}
           checked={optionValue === resultValue}
           onChange={handleChange}
+          required={required}
         />
       ))}
     </div>
@@ -46,8 +48,8 @@ const RadioGroup = ({
 };
 
 RadioGroup.defaultProps = {
-  defaultValue: null,
   className: '',
+  required: false,
 };
 
 RadioGroup.propTypes = {
@@ -56,9 +58,13 @@ RadioGroup.propTypes = {
   /** Settings for each RadioButton */
   options: PropTypes.arrayOf(PropTypes.shape(TRadioButton)).isRequired,
   /** Initial value of group */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Controlled value of group */
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Class for external styles */
   className: PropTypes.string,
+  /** Native property for input */
+  required: PropTypes.bool,
 };
 
 export default RadioGroup;

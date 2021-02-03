@@ -24,6 +24,7 @@ export const StyledTextField = styled(TextField)`
 
     ${StyledPrefix} {
       line-height: 1;
+      cursor: pointer;
     }
 
     ${StyledInput} {

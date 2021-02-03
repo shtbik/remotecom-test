@@ -1,13 +1,16 @@
-import React, { useCallback } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useCallback, useEffect } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import countriesList from 'configs/countries';
+import { fetchMember } from 'redux/people';
 
 import { TextLight } from 'components/Text';
 import { Card } from 'components/Card';
 import TextField from 'components/Form/TextField';
 import SelectField from 'components/Form/SelectField';
 import Alert from 'components/Alert';
+import LoadingLogo from 'components/LoadingLogo';
 
 import RadioGroup from './RadioGroup';
 
@@ -22,11 +25,30 @@ import {
   StyledTextBodyLead,
   StyledWrapperRadioGroup,
   StyledSelectField,
+  StyledLoadingWrapper,
 } from './styled.index';
 
 const MemberForm = () => {
   const { push } = useHistory();
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const { member, loading, error } = useSelector((state) => state);
   const handleListLink = useCallback(() => push('/people'), [push]);
+
+  const { name, jobTitle, country, salary, currency, employment } = member;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const fromData = new FormData(event.target);
+    const requestData = Object.fromEntries(fromData);
+
+    console.log(requestData);
+  };
+
+  useEffect(() => {
+    if (id) dispatch(fetchMember(id));
+  }, [dispatch, id]);
 
   return (
     <StyledContainer>
@@ -39,62 +61,90 @@ const MemberForm = () => {
             Fill out the information of your new team member.
           </TextLight>
         </StyledCardHeader>
-        <form>
+
+        <form onSubmit={handleSubmit}>
           <StyledCardBody>
-            <TextField
-              label='Name'
-              placeholder='e.g. Kim Fog'
-              helper='First and last name'
-            />
-            <TextField
-              label='Job title'
-              placeholder='e.g. Product Manager'
-              helper='What is their role?'
-            />
-            <SelectField
-              label='Country'
-              defaultValue=''
-              helper='Where are they based?'
-            >
-              <option value='' hidden>
-                Select country
-              </option>
-              {countriesList.map((country) => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
-            </SelectField>
-            <TextField
-              label='Salary'
-              placeholder='e.g. 5000'
-              helper='Gross yearly salary'
-              suffix={
-                <StyledSelectField>
-                  <option value='EUR'>EUR</option>
-                  <option value='USD'>USD</option>
-                  <option value='GBP'>GBP</option>
-                </StyledSelectField>
-              }
-            />
+            {loading ? (
+              <StyledLoadingWrapper>
+                <LoadingLogo />
+              </StyledLoadingWrapper>
+            ) : (
+              <>
+                <TextField
+                  name='name'
+                  label='Name'
+                  defaultValue={name}
+                  required
+                  placeholder='e.g. Kim Fog'
+                  helper='First and last name'
+                />
+                <TextField
+                  name='jobTitle'
+                  label='Job title'
+                  defaultValue={jobTitle}
+                  required
+                  placeholder='e.g. Product Manager'
+                  helper='What is their role?'
+                />
+                <SelectField
+                  name='country'
+                  label='Country'
+                  defaultValue={country}
+                  required
+                  helper='Where are they based?'
+                >
+                  <option value='' hidden>
+                    Select country
+                  </option>
+                  {countriesList.map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </SelectField>
+                <TextField
+                  name='salary'
+                  label='Salary'
+                  defaultValue={salary}
+                  required
+                  placeholder='e.g. 5000'
+                  helper='Gross yearly salary'
+                  suffix={
+                    <StyledSelectField
+                      name='currency'
+                      defaultValue={currency}
+                      required
+                    >
+                      <option value='EUR'>EUR</option>
+                      <option value='USD'>USD</option>
+                      <option value='GBP'>GBP</option>
+                    </StyledSelectField>
+                  }
+                />
 
-            <StyledWrapperRadioGroup>
-              <StyledTextBodyLead size='bodyLead' as='p'>
-                Type of employment
-              </StyledTextBodyLead>
-              <RadioGroup />
-            </StyledWrapperRadioGroup>
+                <StyledWrapperRadioGroup>
+                  <StyledTextBodyLead size='bodyLead' as='p'>
+                    Type of employment
+                  </StyledTextBodyLead>
+                  <RadioGroup defaultValue={employment} />
+                </StyledWrapperRadioGroup>
 
-            <Alert
-              type='error'
-              message='Ups, something in our servers went wrong!'
-            />
+                {error && (
+                  <Alert
+                    type='error'
+                    message='Ups, something in our servers went wrong!'
+                  />
+                )}
+              </>
+            )}
           </StyledCardBody>
           <StyledCardFooter>
             <StyledButtonCancel variant='outlined' onClick={handleListLink}>
               Cancel
             </StyledButtonCancel>
-            <StyledButton type='submit'>Add employee</StyledButton>
+            <StyledButton type='submit' disabled={loading}>
+              Add employee
+            </StyledButton>
           </StyledCardFooter>
         </form>
       </Card>

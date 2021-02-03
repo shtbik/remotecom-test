@@ -6,4 +6,5 @@ export const TRadioButton = {
   defaultChecked: PropTypes.bool,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
+  required: PropTypes.bool,
 };
