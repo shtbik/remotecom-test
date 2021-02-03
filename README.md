@@ -21,6 +21,7 @@ This is a basic CRUD (without the delete) of people. You'll implement an app wit
 - **Edit team member** - A form to edit an existing team member;
 
 For further details, follow the design specs in the Figma file shared with you by e-mail.
+https://www.figma.com/file/9rg0ZaQYfLailCQ7IV4DJd/FE-code-exercise-(shtbik)
 
 ### 👀 What we will look at
 
