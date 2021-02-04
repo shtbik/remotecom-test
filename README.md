@@ -120,3 +120,11 @@ This script runs automatically after `npm install`.
 ## Implementation details
 
 Design - https://www.figma.com/file/9rg0ZaQYfLailCQ7IV4DJd/FE-code-exercise-(shtbik)
+
+The task was classic, not very difficult, but quite big. I focused on performance in implementing (reflow, repaint, etc.). Given more time I would fix all the to-dos left in the code and write more serious tests. I rate my result of 7.5 out of 10 points.
+
+The application has several corner cases:
+
+- You can crush a searching request to the server by typing a backslash. But since my part was the front-end, I didn't touch it
+- There is no error handling for the table, so there is an infinity loading. The error state was in the form UI, but it seemed to me that it would not fit the list.
+- The form jumps when the user is saved. This is because I use uncontrolled components, the state of which cannot be changed after the first render (I solve this with the loader). I'll be happy to fix it, but it takes time.
