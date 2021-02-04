@@ -5,13 +5,13 @@ import countries from 'configs/countries';
 // TODO: move currency and employment unions to configs
 
 export const TMember = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  jobTitle: PropTypes.string.isRequired,
-  country: PropTypes.oneOf(countries).isRequired,
-  salary: PropTypes.number.isRequired,
-  currency: PropTypes.oneOf(['EUR', 'USD', 'GBP']).isRequired,
-  employment: PropTypes.oneOf(['contractor', 'employee']).isRequired,
+  id: PropTypes.number,
+  name: PropTypes.string,
+  jobTitle: PropTypes.string,
+  country: PropTypes.oneOf([''].concat(countries)),
+  salary: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  currency: PropTypes.oneOf(['', 'EUR', 'USD', 'GBP']),
+  employment: PropTypes.oneOf(['', 'contractor', 'employee']),
 };
 
 export const TPeopleState = {

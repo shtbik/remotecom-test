@@ -1,5 +1,5 @@
 import { cleanup, render } from 'utils/test-utils';
-import PeopleList from '../List';
+import PeopleList from '../';
 
 describe('People/List', () => {
   afterEach(cleanup);

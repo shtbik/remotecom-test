@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { ThemeProvider } from 'styled-components';
@@ -10,11 +11,13 @@ import Header from 'components/Header';
 
 import store from 'redux/store';
 
-const AllTheProviders = ({ children }) => {
+const AllTheProviders = ({ route }) => ({ children }) => {
+  const history = createMemoryHistory({ initialEntries: [route] });
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router history={history}>
           <GlobalStyles />
           <Header />
 
@@ -25,8 +28,9 @@ const AllTheProviders = ({ children }) => {
   );
 };
 
-const customRender = (ui, options) =>
-  render(ui, { wrapper: AllTheProviders, ...options });
+const customRender = (ui, { route = '/', ...options } = {}) => {
+  return render(ui, { wrapper: AllTheProviders({ route }), ...options });
+};
 
 // re-export everything
 export * from '@testing-library/react';

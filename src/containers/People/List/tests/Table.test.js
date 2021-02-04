@@ -3,8 +3,8 @@ import { cleanup, render } from 'utils/test-utils';
 import { numberWithSpaces, getCurrencySymbol } from 'utils/amount';
 import data from 'server/db.base.json';
 
-import Table from '../List/Table';
-import { TABLE_BODY_HEIGHT } from '../List';
+import Table from '../Table';
+import { TABLE_BODY_HEIGHT } from '../';
 
 const COUNT_OF_COLUMNS = 5;
 const { people } = data;

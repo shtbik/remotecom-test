@@ -11,7 +11,7 @@ import Header from 'components/Header';
 // Pages
 import Playground from 'containers/Playground';
 import PeopleList from 'containers/People/List';
-import PeopleForm from 'containers/People/Form';
+import MemberForm from 'containers/People/Unit';
 
 // Store
 import store from 'redux/store';
@@ -28,8 +28,8 @@ export default function App() {
           <Switch>
             <Route exact path='/' component={PeopleList} />
             <Route exact path='/people' component={PeopleList} />
-            <Route exact path='/people/add' component={PeopleForm} />
-            <Route exact path='/people/edit/:id' component={PeopleForm} />
+            <Route exact path='/people/add' component={MemberForm} />
+            <Route exact path='/people/edit/:id' component={MemberForm} />
             <Route exact path='/playground' component={Playground} />
 
             <Route path='*' component={() => <div>404</div>} />
