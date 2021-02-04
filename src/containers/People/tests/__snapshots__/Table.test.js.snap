@@ -1,0 +1,657 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`People/List/Table count of rows/cols/cells 1`] = `
+<div>
+  <header
+    class="sc-hKgILt gQvQYy"
+  >
+    <div
+      class="sc-eCssSg bbYQtM"
+    >
+      <a
+        class="sc-jSgupP eRMlkk"
+        href="#profile-page"
+      >
+        <span
+          class="sc-gKsewC dyXmPG"
+        />
+        <div
+          class="sc-iBPRYJ guClff"
+        >
+          <span
+            class="sc-bdfBwQ iSpnv"
+          >
+            Julie Howard
+          </span>
+          <span
+            class="sc-bdfBwQ sc-gsTCUz gdLWuU hLkbdn"
+          >
+            Admin
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <table
+    class="sc-fubCfw cclvGq"
+  >
+    <thead>
+      <tr>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="22.5%"
+        >
+          Name
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="25.5%"
+        >
+          Type
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+        >
+          Country
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+        >
+          Salary
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+          width="17%"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Ann Henry
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          Product manager
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          Germany
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          €
+           
+          EUR
+           
+          120,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/1"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Vittoria Janson
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          Pianist
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          Italy
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          €
+           
+          EUR
+           
+          70,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/2"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Philip Alexix
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          Software engineer
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          France
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          €
+           
+          EUR
+           
+          80,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/3"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Annette Williamson
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          CEO
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          United States
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          $
+           
+          USD
+           
+          200,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/4"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Alexander Lazar
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          Customer Success
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          Czech Republic
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          $
+           
+          USD
+           
+          50,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/5"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Jane Doe
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          Product Designer
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          United Kingdom
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          £
+           
+          GBP
+           
+          80,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/6"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+          width="22.5%"
+        >
+          Chris Colgan
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+          width="25.5%"
+        >
+          QA
+        </td>
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          Germany
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+        >
+          €
+           
+          EUR
+           
+          70,000.00
+        </td>
+        <td
+          class="sc-kEjbxe etpmCw"
+          width="17%"
+        >
+          <a
+            class="sc-fFubgz khbSKN sc-fKFyDc hzUZWM"
+            href="/people/edit/7"
+          >
+            Edit
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`People/List/Table error 1`] = `
+<div>
+  <header
+    class="sc-hKgILt gQvQYy"
+  >
+    <div
+      class="sc-eCssSg bbYQtM"
+    >
+      <a
+        class="sc-jSgupP eRMlkk"
+        href="#profile-page"
+      >
+        <span
+          class="sc-gKsewC dyXmPG"
+        />
+        <div
+          class="sc-iBPRYJ guClff"
+        >
+          <span
+            class="sc-bdfBwQ iSpnv"
+          >
+            Julie Howard
+          </span>
+          <span
+            class="sc-bdfBwQ sc-gsTCUz gdLWuU hLkbdn"
+          >
+            Admin
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <table
+    class="sc-fubCfw cclvGq"
+  >
+    <thead>
+      <tr>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="22.5%"
+        >
+          Name
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="25.5%"
+        >
+          Type
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+        >
+          Country
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+        >
+          Salary
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+          width="17%"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="sc-iwyYcG jqvOVL"
+      >
+        <td
+          class="sc-cxFLnm fhvXYG"
+        >
+          <div
+            class="sc-dQppl veoUN"
+          >
+            <svg
+              version="1.1"
+              viewBox="0 0 119.9 148.4"
+              x="0px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <defs />
+              <g>
+                <g>
+                  <path
+                    class="sc-iqHYGH"
+                    d="M49.1,117.1C41.5,112.7,35.4,106.6,31,99c-4.4-7.6-6.7-15.9-6.7-24.8c0-9.1,2.2-17.4,6.7-25.1 c4.4-7.6,10.5-13.7,18.1-18.1c7.6-4.4,15.9-6.6,24.9-6.7V0C60.7,0,48.3,3.3,37,9.9C25.5,16.5,16.5,25.5,9.9,37 C3.3,48.4,0,60.8,0,74.2c0,13.4,3.3,25.8,9.9,37.1c6.6,11.3,15.6,20.3,27.1,27c11.4,6.7,23.7,10,37.1,10.1v-24.6 C65.1,123.7,56.8,121.5,49.1,117.1z"
+                  />
+                </g>
+                <g>
+                  <path
+                    class="sc-crrsfI"
+                    d="M74.1,28.5V120c25.3,0,45.8-20.5,45.8-45.8S99.4,28.5,74.1,28.5z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`People/List/Table loading 1`] = `
+<div>
+  <header
+    class="sc-hKgILt gQvQYy"
+  >
+    <div
+      class="sc-eCssSg bbYQtM"
+    >
+      <a
+        class="sc-jSgupP eRMlkk"
+        href="#profile-page"
+      >
+        <span
+          class="sc-gKsewC dyXmPG"
+        />
+        <div
+          class="sc-iBPRYJ guClff"
+        >
+          <span
+            class="sc-bdfBwQ iSpnv"
+          >
+            Julie Howard
+          </span>
+          <span
+            class="sc-bdfBwQ sc-gsTCUz gdLWuU hLkbdn"
+          >
+            Admin
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <table
+    class="sc-fubCfw cclvGq"
+  >
+    <thead>
+      <tr>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="22.5%"
+        >
+          Name
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="25.5%"
+        >
+          Type
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+        >
+          Country
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+        >
+          Salary
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+          width="17%"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="sc-iwyYcG jqvOVL"
+      >
+        <td
+          class="sc-cxFLnm fhvXYG"
+        >
+          <div
+            class="sc-dQppl veoUN"
+          >
+            <svg
+              version="1.1"
+              viewBox="0 0 119.9 148.4"
+              x="0px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0px"
+            >
+              <defs />
+              <g>
+                <g>
+                  <path
+                    class="sc-iqHYGH"
+                    d="M49.1,117.1C41.5,112.7,35.4,106.6,31,99c-4.4-7.6-6.7-15.9-6.7-24.8c0-9.1,2.2-17.4,6.7-25.1 c4.4-7.6,10.5-13.7,18.1-18.1c7.6-4.4,15.9-6.6,24.9-6.7V0C60.7,0,48.3,3.3,37,9.9C25.5,16.5,16.5,25.5,9.9,37 C3.3,48.4,0,60.8,0,74.2c0,13.4,3.3,25.8,9.9,37.1c6.6,11.3,15.6,20.3,27.1,27c11.4,6.7,23.7,10,37.1,10.1v-24.6 C65.1,123.7,56.8,121.5,49.1,117.1z"
+                  />
+                </g>
+                <g>
+                  <path
+                    class="sc-crrsfI"
+                    d="M74.1,28.5V120c25.3,0,45.8-20.5,45.8-45.8S99.4,28.5,74.1,28.5z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`People/List/Table renders correctly 1`] = `
+<div>
+  <header
+    class="sc-hKgILt gQvQYy"
+  >
+    <div
+      class="sc-eCssSg bbYQtM"
+    >
+      <a
+        class="sc-jSgupP eRMlkk"
+        href="#profile-page"
+      >
+        <span
+          class="sc-gKsewC dyXmPG"
+        />
+        <div
+          class="sc-iBPRYJ guClff"
+        >
+          <span
+            class="sc-bdfBwQ iSpnv"
+          >
+            Julie Howard
+          </span>
+          <span
+            class="sc-bdfBwQ sc-gsTCUz gdLWuU hLkbdn"
+          >
+            Admin
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <table
+    class="sc-fubCfw cclvGq"
+  >
+    <thead>
+      <tr>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="22.5%"
+        >
+          Name
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+          width="25.5%"
+        >
+          Type
+        </th>
+        <th
+          class="sc-jrAGrp gPDrvw"
+        >
+          Country
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+        >
+          Salary
+        </th>
+        <th
+          class="sc-jrAGrp fYsgcj"
+          width="17%"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="sc-pFZIQ"
+      >
+        <td
+          class="sc-kEjbxe dafMof"
+        >
+          <p
+            class="sc-bdfBwQ sc-bBXqnf gjsWpT ksfslS"
+          >
+            There is no data
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

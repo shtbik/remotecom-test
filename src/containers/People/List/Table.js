@@ -26,10 +26,7 @@ const PeopleTable = ({ people, tBodyHeight, loading, error }) => {
         </tr>
       </thead>
       <tbody>
-        {/*
-          TODO: need to add handler for error in UI (figma) 
-          I'll leave what I have for now
-        */}
+        {/* TODO: need to add a handler for error in UI (from figma) */}
         {loading || error ? (
           <TableLoadingWrapper as='tr'>
             <TableLoadingInnerWrapper as='td'>
@@ -64,6 +61,7 @@ const PeopleTable = ({ people, tBodyHeight, loading, error }) => {
 };
 
 PeopleTable.defaultProps = {
+  people: [],
   tBodyHeight: 300,
   loading: false,
   error: false,
@@ -71,7 +69,7 @@ PeopleTable.defaultProps = {
 
 PeopleTable.propTypes = {
   /** Array of people */
-  people: PropTypes.arrayOf(PropTypes.shape(TMember)).isRequired,
+  people: PropTypes.arrayOf(PropTypes.shape(TMember)),
   /** Height of tbody tag */
   tBodyHeight: PropTypes.number,
   /** State of loading of request */

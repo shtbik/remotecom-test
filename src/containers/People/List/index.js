@@ -21,7 +21,7 @@ import {
   StyledTextFieldWrapper,
 } from './styled.index';
 
-const TABLE_BODY_HEIGHT = 467;
+export const TABLE_BODY_HEIGHT = 467;
 
 const PeopleList = () => {
   const { push } = useHistory();

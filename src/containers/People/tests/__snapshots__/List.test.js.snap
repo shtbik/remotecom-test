@@ -6,7 +6,7 @@ exports[`People/List common render 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
+      class="sc-eCssSg bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -33,7 +33,7 @@ exports[`People/List common render 1`] = `
     </div>
   </header>
   <main
-    class="sc-dlfnbm sc-iJuUWI eGSTIL cWwGUa"
+    class="sc-dlfnbm eGSTIL sc-iJuUWI cWwGUa"
   >
     <div
       class="sc-ezrdKe ijUgnk"
@@ -48,7 +48,10 @@ exports[`People/List common render 1`] = `
         </h1>
         <span
           class="sc-bdfBwQ sc-gsTCUz sc-kLgntA gdLWuU hLkbdn dGUObO"
-        />
+          hidden=""
+        >
+          0 employees
+        </span>
       </div>
       <button
         class="sc-fubCfw emMLAO"
