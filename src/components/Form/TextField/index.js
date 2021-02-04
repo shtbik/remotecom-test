@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Hint, THint } from '../Hint';
 import { Label, Field } from '../FieldParts';
@@ -44,4 +44,4 @@ TextField.propTypes = {
   ...THint,
 };
 
-export default TextField;
+export default memo(TextField);

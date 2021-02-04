@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ReactComponent as IconTimesCircle } from 'theme/icons/times-circle.svg';
 
-import { StyledAlert, StyledWrapper } from './styled.index';
+import { StyledAlert, StyledMessage } from './styled.index';
 
 const getIcon = (type) => {
   switch (type) {
@@ -13,14 +13,14 @@ const getIcon = (type) => {
   }
 };
 
-const Alert = memo(({ type, message, className }) => {
+const Alert = ({ type, message, className }) => {
   const Icon = getIcon(type);
   return (
     <StyledAlert type={type} className={className}>
-      {Icon} <StyledWrapper>{message}</StyledWrapper>
+      {Icon} <StyledMessage>{message}</StyledMessage>
     </StyledAlert>
   );
-});
+};
 
 Alert.defaultProps = {
   className: '',
@@ -35,4 +35,4 @@ Alert.propTypes = {
   className: PropTypes.string,
 };
 
-export default Alert;
+export default memo(Alert);

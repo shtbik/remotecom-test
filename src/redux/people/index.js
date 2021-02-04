@@ -17,10 +17,17 @@ import {
 } from './actions';
 
 // Async actions
-export const fetchPeople = (query = '') => {
+export const fetchPeople = (query) => {
   return async (dispatch, getState) => {
+    const { people, query: prevQuery } = getState();
+    // for cases when user wants to search empty query and has already loaded full list
+    console.log('fetchPeople', prevQuery, query, people.length);
+    if ((!prevQuery && !query && people.length) || prevQuery === query) {
+      return false;
+    }
+
     dispatch(setLoading());
-    dispatch(setQuery({ query }));
+    dispatch(setQuery({ query: query || '' }));
 
     const params = {};
     if (query) params.name_like = query;

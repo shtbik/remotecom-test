@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, memo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as IconSearch } from 'theme/icons/search.svg';
@@ -8,11 +8,14 @@ import { StyledTextField } from './styled.index';
 const InputSearch = ({ placeholder, onSearch }) => {
   const inputRef = useRef();
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const value = inputRef?.current?.value;
-    onSearch(value);
-  };
+  const handleSearch = useCallback(
+    (event) => {
+      event.preventDefault();
+      const value = inputRef.current?.value;
+      onSearch(value);
+    },
+    [onSearch]
+  );
 
   return (
     <form onSubmit={handleSearch}>
@@ -38,4 +41,4 @@ InputSearch.propTypes = {
   onSearch: PropTypes.func,
 };
 
-export default InputSearch;
+export default memo(InputSearch);

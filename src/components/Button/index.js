@@ -3,17 +3,14 @@ import PropTypes from 'prop-types';
 
 import { StyledButton, StyledPrefix, StyledIconLoading } from './styled.index';
 
-const Button = memo(
-  ({ children, type, variant, prefix, loading, ...props }) => {
-    return (
-      <StyledButton type={type} variant={variant} {...props}>
-        {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
-        {loading ? <StyledIconLoading variant={variant} /> : children}
-      </StyledButton>
-    );
-  }
-);
-
+const Button = ({ children, type, variant, prefix, loading, ...props }) => {
+  return (
+    <StyledButton type={type} variant={variant} {...props}>
+      {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
+      {loading ? <StyledIconLoading variant={variant} /> : children}
+    </StyledButton>
+  );
+};
 Button.defaultProps = {
   type: 'button',
   variant: 'contained',
@@ -33,4 +30,4 @@ Button.propTypes = {
   loading: PropTypes.bool,
 };
 
-export default Button;
+export default memo(Button);

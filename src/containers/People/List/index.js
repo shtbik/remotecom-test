@@ -26,21 +26,21 @@ const TABLE_BODY_HEIGHT = 467;
 const PeopleList = () => {
   const { push } = useHistory();
   const dispatch = useDispatch();
-  const { people, loading, error, query: prevQuery } = useSelector(
-    (state) => state
-  );
+  const { people, loading, error } = useSelector((state) => state);
   const handleMemberLink = useCallback(() => push('/people/add'), [push]);
-  const handleSearch = (query) => {
-    // for cases when user wants to search empty query and has already loaded full list
-    if ((!prevQuery && !query && people.length) || prevQuery === query)
-      return false;
-    dispatch(fetchPeople(query));
-  };
+  const handleSearch = useCallback(
+    (query) => {
+      dispatch(fetchPeople(query));
+    },
+    [dispatch]
+  );
 
   const isReadyToShowNubmerOfPeople = useMemo(
     () => people.length >= 0 && !loading && !error,
     [people, loading, error]
   );
+
+  const memorizedIcon = useMemo(() => <IconUser width={20} />, []);
 
   useEffect(() => {
     dispatch(fetchPeople());
@@ -53,12 +53,16 @@ const PeopleList = () => {
           <Text size='h2' as='h1'>
             People
           </Text>
-          <StyledTextLight size='bodyCaption' as='span'>
-            {isReadyToShowNubmerOfPeople ? `${people.length} employees` : ''}
+          <StyledTextLight
+            size='bodyCaption'
+            as='span'
+            hidden={!isReadyToShowNubmerOfPeople}
+          >
+            {`${people.length} employees`}
           </StyledTextLight>
         </StyledTitleComponent>
 
-        <Button prefix={<IconUser width={20} />} onClick={handleMemberLink}>
+        <Button prefix={memorizedIcon} onClick={handleMemberLink}>
           Add member
         </Button>
       </StyledSectionHeader>

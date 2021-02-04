@@ -65,6 +65,8 @@ const PeopleTable = ({ people, tBodyHeight, loading, error }) => {
 
 PeopleTable.defaultProps = {
   tBodyHeight: 300,
+  loading: false,
+  error: false,
 };
 
 PeopleTable.propTypes = {
@@ -72,10 +74,10 @@ PeopleTable.propTypes = {
   people: PropTypes.arrayOf(PropTypes.shape(TMember)).isRequired,
   /** Height of tbody tag */
   tBodyHeight: PropTypes.number,
-  /** State of request */
-  loading: PropTypes.bool.isRequired,
-  /** State of error */
-  error: PropTypes.bool.isRequired,
+  /** State of loading of request */
+  loading: PropTypes.bool,
+  /** State of error of request */
+  error: PropTypes.bool,
 };
 
 export default PeopleTable;

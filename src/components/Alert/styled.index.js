@@ -12,7 +12,7 @@ export const StyledAlert = styled.div`
   color: var(--colors-bayoux);
 `;
 
-export const StyledWrapper = styled.div`
+export const StyledMessage = styled.div`
   margin-left: 15px;
   letter-spacing: 0.5px;
 `;

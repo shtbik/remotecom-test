@@ -21,6 +21,7 @@ const StyledContainer = styled(Container)`
 const TitleComponent = styled.h2`
   font-size: 1.2rem;
   font-family: 'Courier New', Courier, monospace;
+  font-display: swap;
   font-weight: 600;
   margin: 24px 0 0;
   padding-top: 24px;
