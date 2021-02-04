@@ -26,6 +26,7 @@ const colors = css`
   ${'' /* Background */}
   --colors-blank: #ffffff;
   --colors-geyser: #cbd3dc;
+  --colors-zircon: #f9faff;
 
   ${'' /* Alerts */}
   --colors-error: rgba(255, 75, 85, 0.05);

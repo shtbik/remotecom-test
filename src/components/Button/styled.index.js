@@ -34,27 +34,9 @@ const getButtonStylesByVariant = (variant) => {
         }
 
         &:focus {
-          border-color: #d0caf7;
+          border-color: var(--colors-moonraker);
         }
       `;
-  }
-};
-
-const getLoaderStylesByVariant = (variant) => {
-  switch (variant) {
-    case 'outlined':
-      return css`
-        circle {
-          fill: var(--colors-moonraker);
-        }
-
-        path {
-          fill: var(--colors-irisBlue);
-        }
-      `;
-    case 'contained':
-    default:
-      return ``;
   }
 };
 
@@ -95,6 +77,24 @@ const external = keyframes`
     transform: rotate(360deg);
   }
 `;
+
+const getLoaderStylesByVariant = (variant) => {
+  switch (variant) {
+    case 'outlined':
+      return css`
+        circle {
+          fill: var(--colors-moonraker);
+        }
+
+        path {
+          fill: var(--colors-irisBlue);
+        }
+      `;
+    case 'contained':
+    default:
+      return ``;
+  }
+};
 
 export const StyledIconLoading = styled(IconLoading)`
   animation: ${external} 1s linear infinite;

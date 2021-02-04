@@ -20,4 +20,9 @@ export const THint = {
   errorMsg: PropTypes.string,
 };
 
+Hint.defaulProps = {
+  helper: '',
+  errorMsg: '',
+};
+
 Hint.propTypes = THint;

@@ -21,7 +21,7 @@ export const CardBody = styled.div`
 
 export const CardFooter = styled.div`
   padding: var(--spacer);
-  background-color: #f9faff;
+  background-color: var(--colors-zircon);
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 `;

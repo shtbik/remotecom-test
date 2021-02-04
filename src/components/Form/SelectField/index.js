@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Hint } from '../Hint';
+import { Hint, THint } from '../Hint';
 import { Field, Label } from '../FieldParts';
 
 import { Select } from './styled.index';
@@ -27,10 +27,7 @@ SelectField.defaultProps = {
 SelectField.propTypes = {
   /** Field label */
   label: PropTypes.string,
-  /** Field description message */
-  helper: PropTypes.string,
-  /** Field error message */
-  errorMsg: PropTypes.string,
+  ...THint,
 };
 
 export default SelectField;

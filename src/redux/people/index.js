@@ -39,7 +39,7 @@ export const fetchPeople = (query) => {
         params,
       });
       dispatch(setPeopleData({ people: peopleRes.data }));
-    } catch (error) {
+    } catch {
       dispatch(setError());
     }
   };
@@ -76,7 +76,7 @@ export const fetchMember = (memberId) => {
       dispatch(
         setMemberData({ type: FETCH_MEMBER_REQUEST, member: memberRes.data[0] })
       );
-    } catch (err) {
+    } catch {
       dispatch(setError());
     }
   };

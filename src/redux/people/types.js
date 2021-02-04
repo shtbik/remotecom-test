@@ -16,7 +16,7 @@ export const TMember = {
 
 export const TPeopleState = {
   people: PropTypes.arrayOf(PropTypes.shape(TMember)),
-  member: TMember.isRequired,
+  member: PropTypes.shape(TMember).isRequired,
   query: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,

@@ -121,7 +121,7 @@ This script runs automatically after `npm install`.
 
 Design - https://www.figma.com/file/9rg0ZaQYfLailCQ7IV4DJd/FE-code-exercise-(shtbik)
 
-The task was classic, not very difficult, but quite big. I focused on performance in implementing (reflow, repaint, etc.). Given more time I would fix all the to-dos left in the code and write more serious tests. I rate my result of 7.5 out of 10 points.
+The task was classic, not very difficult, but quite big. I focused on performance in implementing (reflow, repaint, etc.). Given more time I would fix all the todos left in the code and write more serious tests, take care of styles. I rate my result of 7.5 out of 10 points.
 
 The application has several corner cases:
 

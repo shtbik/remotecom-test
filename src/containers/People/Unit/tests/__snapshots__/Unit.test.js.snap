@@ -1251,7 +1251,7 @@ exports[`People/Form renders correctly - new user 1`] = `
         </form>
       </div>
       <div
-        class="sc-kEjbxe sc-iktFzd hJIpNw bSsRKq"
+        class="sc-kEjbxe sc-iktFzd cJtoxH bSsRKq"
       >
         <button
           class="sc-hHftDr halfjU sc-hiSbYr fetCko"
@@ -1260,7 +1260,7 @@ exports[`People/Form renders correctly - new user 1`] = `
           Cancel
         </button>
         <button
-          class="sc-hHftDr kZBFsp sc-jJEJSO hagNKY"
+          class="sc-hHftDr cPXLuO sc-jJEJSO hagNKY"
           form="userForm"
           type="submit"
         >

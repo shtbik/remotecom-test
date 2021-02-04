@@ -68,6 +68,7 @@ RadioButton.defaultProps = {
 
 RadioButton.propTypes = {
   ...TRadioButton,
+  /** Native property of input */
   name: PropTypes.string.isRequired,
 };
 
