@@ -72,9 +72,9 @@ PeopleTable.propTypes = {
   people: PropTypes.arrayOf(PropTypes.shape(TMember)),
   /** Height of tbody tag */
   tBodyHeight: PropTypes.number,
-  /** State of loading of request */
+  /** State of loading */
   loading: PropTypes.bool,
-  /** State of error of request */
+  /** State of error */
   error: PropTypes.bool,
 };
 

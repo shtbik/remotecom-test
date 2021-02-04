@@ -1,9 +1,10 @@
 import { render } from '@testing-library/react';
+
 import App from '../';
 
 describe('App', () => {
   it('renders playground', () => {
     const { getByText } = render(<App />);
-    expect(getByText('Add member')).toBeInTheDocument();
+    expect(getByText('Julie Howard')).toBeInTheDocument();
   });
 });

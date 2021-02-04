@@ -19,7 +19,7 @@ import {
   StyledButtonCancel,
 } from './styled.index';
 
-// TODO: add normal validation for the future
+// TODO: add a stronger validation for the future
 const MemberForm = () => {
   const { push } = useHistory();
   const { id } = useParams();

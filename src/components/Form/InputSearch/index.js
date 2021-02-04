@@ -35,9 +35,9 @@ InputSearch.defaultProps = {
 };
 
 InputSearch.propTypes = {
-  // ** Native property of input tag */
+  /** Native property of input tag */
   placeholder: PropTypes.string,
-  // ** Function will return you a string - search query * /
+  /** Function will return you a string - search query */
   onSearch: PropTypes.func,
 };
 

@@ -6,7 +6,7 @@ exports[`People/Form renders correctly - new user 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -33,7 +33,7 @@ exports[`People/Form renders correctly - new user 1`] = `
     </div>
   </header>
   <main
-    class="sc-dlfnbm eGSTIL sc-iJuUWI cWwGUa"
+    class="sc-dlfnbm sc-iJuUWI eGSTIL cWwGUa"
   >
     <div
       class="sc-fubCfw foltsl"

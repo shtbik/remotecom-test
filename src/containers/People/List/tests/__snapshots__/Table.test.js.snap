@@ -6,7 +6,7 @@ exports[`People/List/Table count of rows/cols/cells 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -364,7 +364,7 @@ exports[`People/List/Table error 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -471,7 +471,7 @@ exports[`People/List/Table loading 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -578,7 +578,7 @@ exports[`People/List/Table renders correctly 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"

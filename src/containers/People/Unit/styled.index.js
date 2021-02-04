@@ -5,9 +5,9 @@ import { CardHeader, CardBody, CardFooter } from 'components/Card';
 import Button from 'components/Button';
 import Text from 'components/Text';
 import RadioGroup from 'components/Form/RadioGroup';
-import { StyledLabel } from 'components/Form/RadioButton/styled.index';
 import SelectField from 'components/Form/SelectField';
 import Alert from 'components/Alert';
+import { StyledLabel } from 'components/Form/RadioButton/styled.index';
 
 export const StyledContainer = styled(Container)`
   margin-top: 40px;

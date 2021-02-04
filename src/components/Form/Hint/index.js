@@ -18,7 +18,6 @@ export const THint = {
   helper: PropTypes.string,
   /** Field error message */
   errorMsg: PropTypes.string,
-  /** The prefix component (Icons, etc.) */
 };
 
 Hint.propTypes = THint;

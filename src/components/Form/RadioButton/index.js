@@ -66,6 +66,9 @@ RadioButton.defaultProps = {
   required: false,
 };
 
-RadioButton.propTypes = { ...TRadioButton, name: PropTypes.string.isRequired };
+RadioButton.propTypes = {
+  ...TRadioButton,
+  name: PropTypes.string.isRequired,
+};
 
 export default RadioButton;

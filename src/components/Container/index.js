@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.main`
@@ -9,4 +8,4 @@ const Container = styled.main`
   max-width: var(--layout-width);
 `;
 
-export default memo(Container);
+export default Container;

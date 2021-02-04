@@ -8,7 +8,7 @@ import {
   ProfileInfo,
 } from './styled.index';
 
-export default function Header() {
+const Header = () => {
   const userFake = { name: 'Julie Howard', role: 'Admin', picUrl: null };
 
   return (
@@ -24,4 +24,6 @@ export default function Header() {
       </StyledContainer>
     </Wrapper>
   );
-}
+};
+
+export default Header;

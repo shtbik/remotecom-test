@@ -39,7 +39,10 @@ const Form = ({ member, loading, error, handleChangeMember }) => {
 
   return (
     <form onSubmit={handleChangeMember} id='userForm' data-testid='userForm'>
-      {/* Not best UX, which I can make  */}
+      {/* 
+        TODO: Not best UX, which I can make 
+        need a powerful tool to work with form state like react-final-form, instead of uncontrolled fields
+      */}
       {loading ? (
         <StyledLoadingWrapper>
           <LoadingLogo />

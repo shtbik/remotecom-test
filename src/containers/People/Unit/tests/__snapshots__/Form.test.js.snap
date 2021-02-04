@@ -6,7 +6,7 @@ exports[`People/Form error state 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -1251,7 +1251,7 @@ exports[`People/Form fire onSubmit with initial data 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -2482,7 +2482,7 @@ exports[`People/Form fire onSubmit without initial data 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -3710,7 +3710,7 @@ exports[`People/Form loading state 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"
@@ -3782,7 +3782,7 @@ exports[`People/Form renders correctly - new user 1`] = `
     class="sc-hKgILt gQvQYy"
   >
     <div
-      class="sc-eCssSg bbYQtM"
+      class="sc-dlfnbm sc-eCssSg eGSTIL bbYQtM"
     >
       <a
         class="sc-jSgupP eRMlkk"

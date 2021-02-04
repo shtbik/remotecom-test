@@ -35,7 +35,7 @@ export const Table = styled.table`
 `;
 
 Table.propTypes = {
-  /** Property to set height of tbody tag, thead will be fixed */
+  /** Property to set height of tbody tag */
   tBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 

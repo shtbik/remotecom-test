@@ -1,17 +1,8 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as IconTimesCircle } from 'theme/icons/times-circle.svg';
-
+import { getIcon } from './base';
 import { StyledAlert, StyledMessage } from './styled.index';
-
-const getIcon = (type) => {
-  switch (type) {
-    case 'error':
-    default:
-      return <IconTimesCircle width='22' fill='var(--colors-error-icon)' />;
-  }
-};
 
 const Alert = ({ type, message, className }) => {
   const Icon = getIcon(type);
@@ -27,7 +18,7 @@ Alert.defaultProps = {
 };
 
 Alert.propTypes = {
-  /** Type of alert for defferent styles */
+  /** Type of alert for different styles */
   type: PropTypes.oneOf(['error']).isRequired,
   /** To show what is alert about */
   message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,

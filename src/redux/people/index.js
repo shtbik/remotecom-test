@@ -20,7 +20,7 @@ import {
 export const fetchPeople = (query) => {
   return async (dispatch, getState) => {
     const { people, query: prevQuery } = getState();
-    // for cases when user wants to search empty query and has already loaded full list
+    // In cases when the user wants to search empty query and has already loaded full list
     if (
       (prevQuery === '' && query === '' && people.length) ||
       prevQuery === query
@@ -52,7 +52,7 @@ export const fetchMember = (memberId) => {
 
     if (people.length) {
       // This is a trick to divide a synchronous call stack and re-paint (re-render) changes
-      // We can remove, but I need a power tool to manage form/field state and to avoid extra repaint
+      // We can remove, but I need a tool to manage form/field state and to avoid extra repaint
       await new Promise((resolve) => {
         setTimeout(() => {
           resolve();
@@ -124,9 +124,10 @@ const initialMember = {
   employment: '',
 };
 
+// Should move the structure to Object to find cached value at O(1),
+// but at the moment not so critical
 // TPeopleState
 const initialState = {
-  // Should move structure to Object for find cached value at O(1), but at the moment not so critical
   people: [],
   member: initialMember,
   query: '',

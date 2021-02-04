@@ -1,4 +1,4 @@
-// TODO: add tests
+// TODO: add unit tests
 
 export const numberWithSpaces = (amount) => {
   var parts = amount.toString().split('.');

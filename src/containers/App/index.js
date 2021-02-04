@@ -16,8 +16,7 @@ import MemberForm from 'containers/People/Unit';
 // Store
 import store from 'redux/store';
 
-// TODO: add 404 page
-export default function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -32,10 +31,13 @@ export default function App() {
             <Route exact path='/people/edit/:id' component={MemberForm} />
             <Route exact path='/playground' component={Playground} />
 
+            {/* TODO: add 404 page */}
             <Route path='*' component={() => <div>404</div>} />
           </Switch>
         </Router>
       </ThemeProvider>
     </Provider>
   );
-}
+};
+
+export default App;

@@ -53,7 +53,7 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.propTypes = {
-  /** Name of input groupe */
+  /** Name of input group */
   name: PropTypes.string.isRequired,
   /** Settings for each RadioButton */
   options: PropTypes.arrayOf(PropTypes.shape(TRadioButton)).isRequired,
@@ -63,7 +63,7 @@ RadioGroup.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Class for external styles */
   className: PropTypes.string,
-  /** Native property for input */
+  /** Native property for the input */
   required: PropTypes.bool,
 };
 
