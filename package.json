@@ -2,6 +2,7 @@
   "name": "fe-code-exercise",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shtbik.github.io/remotecom-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -24,6 +25,8 @@
     "server": "json-server --watch --port 4000 --delay 1500 src/server/db.json",
     "start": "concurrently \"npm run server\" \"react-scripts start\"",
     "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "npm run seed-db"

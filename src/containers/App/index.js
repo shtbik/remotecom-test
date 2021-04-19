@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <GlobalStyles />
           <Header />
 
