@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/remotecom-test/static/js/main.8833992e.chunk.js",
+    "main.js.map": "/remotecom-test/static/js/main.8833992e.chunk.js.map",
+    "runtime-main.js": "/remotecom-test/static/js/runtime-main.1c7ec698.js",
+    "runtime-main.js.map": "/remotecom-test/static/js/runtime-main.1c7ec698.js.map",
+    "static/js/2.8fda525c.chunk.js": "/remotecom-test/static/js/2.8fda525c.chunk.js",
+    "static/js/2.8fda525c.chunk.js.map": "/remotecom-test/static/js/2.8fda525c.chunk.js.map",
+    "index.html": "/remotecom-test/index.html",
+    "static/js/2.8fda525c.chunk.js.LICENSE.txt": "/remotecom-test/static/js/2.8fda525c.chunk.js.LICENSE.txt",
+    "static/media/loading.42fc9944.svg": "/remotecom-test/static/media/loading.42fc9944.svg",
+    "static/media/search.c05db743.svg": "/remotecom-test/static/media/search.c05db743.svg",
+    "static/media/times-circle.dfc4fb25.svg": "/remotecom-test/static/media/times-circle.dfc4fb25.svg",
+    "static/media/user.3c172fd1.svg": "/remotecom-test/static/media/user.3c172fd1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c7ec698.js",
+    "static/js/2.8fda525c.chunk.js",
+    "static/js/main.8833992e.chunk.js"
+  ]
+}
