@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button add prefix component 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    type="button"
+  >
+    <span
+      class="sc-gsTCUz ldnpWj"
+    >
+      <div>
+        prefix
+      </div>
+    </span>
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button different type 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    type="submit"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button different variant 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ cyOIVg"
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button firing onClick 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button loading state 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    type="button"
+  >
+    <svg
+      class="sc-dlfnbm bLrFhA"
+      variant="contained"
+    >
+      loading.svg
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Button onClick with disabled state 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button renders correctly 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Button spreads custom attributes 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ Ilmju"
+    data-foo="12"
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;

@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     ${colors}
 
     --font-primary: "Inter", sans-serif;
-    --layout-width: 1100px;
+    --layout-width: 1110px;
   }
 
   html {
