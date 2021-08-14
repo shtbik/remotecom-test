@@ -1,5 +1,7 @@
 # Frontend code exercise
 
+## Check the result - https://github.com/shtbik/remotecom-test/pull/2
+
 Hello there!
 
 If you're reading this, it means you're now at the coding exercise step of the engineering hiring process WOOT WOOT. We're really happy that you made it here and super appreciative of your time!
